@@ -13,7 +13,7 @@ fetch(API_URL)
     console.log(dogImage);
 
     dogContainer.innerHTML = `
-        <img src="${dogImage}" alt="Random Dog/>
+        <img src="${dogImage}" alt="Random Dog"/>
     `;
   })
   .catch((error) => {
