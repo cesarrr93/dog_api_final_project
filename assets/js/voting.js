@@ -4,7 +4,7 @@ let likedDogs = JSON.parse(localStorage.getItem("likedDogs")) || [];
 //Stores dog image in an array at local storage
 export function handleVoteUp(dogImage) {
     likedDogs.push(dogImage);
-    localStorage.setItem("likeDgos", JSON.stringify(likedDogs));
+    localStorage.setItem("likedDogs", JSON.stringify(likedDogs));
     alert("You Liked this dog!");
 }
 // Gives user an alert when down vote 
