@@ -8,6 +8,7 @@
     
 </head>
 <body>
+
     <!-- Navigation Bar -->
      <nav>
         <div class="nav-left">
@@ -16,16 +17,24 @@
         </div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#contact" id="contact">Contact Me</a></li>
-            <li><a href="#likes" id="likes">Likes</a></li>
+            <li><a href="#contact" id="contact-link">Contact Me</a></li>
+            <li><a href="#likes" id="likes-link">Likes</a></li>
         </ul>
      </nav>
 
-    <h1>Random Dog Generator</h1>
-    <div id="dog-container">
-        <!-- Random image and breed should be display here. -->
-    </div>
+    <!-- Main Content -->
+     <main>
+        <h1>Random Dog Generator</h1>
+        <div id="dog-container">
+             <!-- Random image and breed should be display here. -->
+        </div>
+        <div class="vote-buttons">
+            <button id="vote-up">👍 Vote Up</button>
+            <button id="vote-down">👎 Vote Down</button>
+        </div>
+     </main>
+
     <!-- JS Script -->
-     <script src="assets/js/index.js"></script>
+     <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>
