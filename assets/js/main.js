@@ -2,15 +2,16 @@
 import { fetchDog } from "./api.js"; // imports fetchDog function from api.js
 import { handleVoteUp, handleVoteDown, getLikedDogs } from "./voting.js";
 import { displayLikedDogs } from "./gallery.js";
+import { setUpModal } from "./modal.js";
 
 // Variables to target HTML content
 const dogContainer = document.getElementById("dog-container");
 const voteUpBtn = document.getElementById("vote-up");
 const voteDownBtn = document.getElementById("vote-down");
 const likesLink = document.getElementById("likes-link");
-// 
+//
 // Fetch and display a random dog
-// 
+//
 async function loadRandomDog() {
   // Stores data[0].url into dogImage variable
   const dogImage = await fetchDog();
@@ -23,13 +24,13 @@ async function loadRandomDog() {
     dogContainer.innerHTML = "<p>Failed to load dog data. Try again.</p>";
   }
 }
-// 
+//
 // Voting Section
-// 
+//
 voteUpBtn.addEventListener("click", () => {
   // stores current dog into currentDog variable
   const currentDog = document.getElementById("current-dog").src;
-  // current dog gets passed down to handle vote up 
+  // current dog gets passed down to handle vote up
   handleVoteUp(currentDog);
   // Loads new random dog
   loadRandomDog();
@@ -42,14 +43,16 @@ voteDownBtn.addEventListener("click", () => {
   loadRandomDog();
 });
 
-// 
+//
 // Initialize dog liked gallery
-// 
+//
 likesLink.addEventListener("click", () => {
   const likedDogs = getLikedDogs(); // Gets string array of liked dogs stored in localStorage
   displayLikedDogs(likedDogs);
 });
 
+// Initialize modal
+setUpModal();
 
 // Calls function to display random dog
 loadRandomDog();

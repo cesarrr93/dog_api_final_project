@@ -34,6 +34,23 @@
         </div>
      </main>
 
+    <!--Contact Me Modal  -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="name" required>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" rows="4" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
     <!-- Liked Dog Gallery -->
      <section id="likes-gallery">
         <h2>Liked Dogs</h2>
@@ -42,6 +59,16 @@
 
         </div>
      </section>
+
+    <!-- Message Section -->
+     <section id="messages">
+        <h2>Messages</h2>
+        <div id="message-container">
+            <!-- Messages that are submited at modal will display here -->
+
+        </div>
+     </section>
+
 
     <!-- JS Script -->
      <script type="module" src="assets/js/main.js"></script>

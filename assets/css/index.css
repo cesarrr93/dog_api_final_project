@@ -97,6 +97,72 @@ h1 {
     background-color: var(--secondary-color);
 }
 
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+  
+.modal-content {
+    background-color: var(--card-background);
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+  
+.close {
+    float: right;
+    font-size: 24px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+  
+.close:hover {
+    color: var(--primary-color);
+}
+  
+  /* Contact Form */
+#contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: var(--text-color);
+}
+  
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+  
+#contact-form button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+#contact-form button:hover {
+    background-color: var(--secondary-color);
+}
+
 /* Liked Dogs Gallery */
 #likes-gallery {
     margin-top: 40px;
@@ -122,4 +188,31 @@ h1 {
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid var(--border-color);
+}
+
+/* Message Section */
+#messages {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#messages h2 {
+    color: var(--primary-color);
+}
+
+#messages-container {
+    margin-top: 10px;
+}
+
+#messages-container div {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+#messages-container div:last-child {
+    border-bottom: none;
 }
