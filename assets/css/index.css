@@ -76,6 +76,19 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: var(--card-background);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+}
+
 /* Vote Buttons */
 .vote-buttons {
     margin-top: 20px;
@@ -215,4 +228,77 @@ h1 {
 
 #messages-container div:last-child {
     border-bottom: none;
+}
+
+/* 
+    Media Queries
+*/
+
+/* Media Queries for Tablet */
+@media (max-width: 768px) {
+    .nav-links {
+      gap: 15px;
+    }
+  
+    .nav-links a {
+      font-size: 16px;
+    }
+  
+    #dog-container img {
+      max-height: 300px;
+    }
+  
+    .modal-content {
+      width: 70%;
+    }
+  
+    #liked-dogs-container img {
+      width: 120px;
+      height: 120px;
+    }
+}
+  
+/* Media Queries for Phone */
+@media (max-width: 480px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .nav-links a {
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    #dog-container img {
+      max-height: 200px;
+    }
+  
+    .vote-buttons button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  
+    .modal-content {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    #liked-dogs-container img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    #messages h2,
+    #likes-gallery h2 {
+      font-size: 20px;
+    }
 }
