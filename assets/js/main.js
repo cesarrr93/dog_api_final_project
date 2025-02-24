@@ -4,6 +4,23 @@ import { handleVoteUp, handleVoteDown, getLikedDogs } from "./voting.js";
 import { displayLikedDogs } from "./gallery.js";
 import { setUpModal } from "./modal.js";
 
+// Creating Footer
+const footer = document.createElement("footer");
+// Selecting body
+const body = document.querySelector("body");
+// Adding footer to body
+body.appendChild(footer);
+// Create date
+const today = new Date();
+// Storing Current Year
+const thisYear = today.getFullYear();
+// Adding Copyright and year to footer
+const copyright = document.createElement("p");
+// adding text to p tag
+copyright.textContent = `© Cesar Martinez ${thisYear}`;
+// adding copyright to footer
+footer.appendChild(copyright);
+
 // Variables to target HTML content
 const dogContainer = document.getElementById("dog-container");
 const voteUpBtn = document.getElementById("vote-up");
